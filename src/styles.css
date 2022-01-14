@@ -1,0 +1,276 @@
+/* FONTS: */
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap"); /* GLOBALES: */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding-left: 0;
+}
+
+.App {
+  align-items: center;
+  background-color: #c0fff7;
+  color: #235597;
+  display: flex;
+  font-family: Roboto Mono, monospace;
+  height: 100vh;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.red {
+  background-color: rgb(255 104 104);
+  transition-duration: 0.5s;
+}
+
+.blue {
+  background-color: rgb(159 201 255);
+  transition-duration: 0.5s;
+}
+
+.green {
+  background-color: rgb(187 255 155);
+  transition-duration: 0.5s;
+}
+
+.yellow {
+  background-color: rgb(255 249 193);
+  transition-duration: 0.5s;
+}
+
+.container {
+  border: 4px solid #235597;
+  clip-path: polygon(
+    0% 1%,
+    1% 1%,
+    1% 0%,
+    99% 0%,
+    99% 1%,
+    100% 1%,
+    100% 99%,
+    99% 99%,
+    99% 100%,
+    1% 100%,
+    1% 99%,
+    0% 99%
+  );
+  height: 600px;
+  overflow: hidden;
+  position: relative;
+  width: 500px;
+}
+
+.shadow {
+  background-color: rgba(0, 0, 0, 0.15);
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+
+.background-image {
+  display: block;
+  position: absolute;
+  z-index: -2;
+}
+
+.title-h1 {
+  color: #f7c509;
+  font-family: Fjalla One;
+  font-size: 40px;
+  letter-spacing: 7px;
+  text-transform: uppercase;
+  text-shadow: -3px 0 0 #235597, 3px 0 0 #235597, 0 -3px 0 #235597,
+    0 3px 0 #235597, 0 0 5px #000000;
+}
+
+.btn {
+  background: #ffffff;
+  border: none;
+  box-shadow: -5px 0 0 #235597, 5px 0 0 #235597, 0 -5px 0 #235597,
+    0 5px 0 #235597;
+  color: #235597;
+  cursor: pointer;
+  font-family: Roboto Mono, monospace;
+  font-size: 18px;
+  padding: 10px 20px;
+}
+
+.btn:hover {
+  background: #f7c509;
+  transition-duration: 0.5s;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.display-none {
+  display: none;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* HOME: */
+
+.home__title {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+}
+
+.home__title-btn {
+  margin-top: 20px;
+}
+
+/* POKEDEX: */
+
+.pokedex__hero {
+  padding: 40px 0 15px;
+}
+
+.pokedex__hero-subtitle {
+  background-color: #ffffff;
+  color: #235597;
+  font-size: 14px;
+  margin: 10px auto 0;
+  padding: 0 5px;
+  width: fit-content;
+}
+
+.pokedex__hero-pokeball {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 10px 5px;
+}
+
+.pokedex__hero-btn {
+  box-shadow: -3px 0 0 #235597, 3px 0 0 #235597, 0 -3px 0 #235597,
+    0 3px 0 #235597;
+  color: #235597;
+  display: block;
+  font-size: 14px;
+  margin: 0 auto;
+  padding: 3px;
+}
+
+.pokedex__main {
+  background-color: #ffffff;
+  border-top: 3px solid #235597;
+  display: flex;
+  height: 385px;
+}
+
+/* POKEMONS: */
+
+.pokemons__aside {
+  border-right: 3px solid #235597;
+  flex-basis: 40%;
+  padding: 15px 20px;
+}
+
+.pokemons__aside--h2 {
+  font-size: 18px;
+  border-bottom: 3px solid #235597;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  text-align: left;
+}
+
+.pokemons__aside--pokemonPiker-Ul {
+  height: 85%;
+  overflow-y: scroll;
+}
+
+.pokemons__cardContainer {
+  align-items: center;
+  display: flex;
+  flex-basis: 60%;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* POKEMON PICKER: */
+
+.pokemon-picker__li-pokeball {
+  margin-right: 10px;
+  width: 15px;
+}
+
+.pokemon-picker__li {
+  cursor: pointer;
+  display: flex;
+  padding: 5px;
+}
+
+.pokemon-picker__li a {
+  color: #235597;
+}
+
+.pokemon-picker__li a:hover {
+  text-decoration: underline;
+}
+
+/* CARD: */
+
+.card__images {
+  background-color: #e1e1e1;
+  border-radius: 20px;
+  margin: 0 10px 10px;
+}
+
+.card__h1 {
+  font-size: 30px;
+}
+
+.card__skillsUl {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.card__skillsLi {
+  background-color: #235597;
+  box-shadow: -3px 0 0 #235597, 3px 0 0 #235597, 0 -3px 0 #235597,
+    0 3px 0 #235597;
+  color: #ffffff;
+  margin: 0 15px 15px 0;
+  padding: 0 5px;
+}
+
+/* LOAGING: */
+
+.loading {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+}
+
+.loading__pokeball {
+  width: 30%;
+  margin-bottom: 20px;
+}
+
+.animate__animated.animate__shakeY {
+  --animate-duration: 3s;
+}
